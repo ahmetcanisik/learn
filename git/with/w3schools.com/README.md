@@ -24,3 +24,11 @@ this command will be merged halona branch to current branch (main).
 ```shell
 git merge halona
 ```
+
+# remote
+```shell
+git remote add origin [url] &&
+git push --set-upstream origin master
+```
+
+git pull is combination of fetch and merge.

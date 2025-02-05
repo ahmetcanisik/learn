@@ -1,0 +1,21 @@
+{
+  "name": "basic-server",
+  "version": "0.0.1",
+  "description": "Create basic server with Node.js",
+  "main": "./dist/index.js",
+  "scripts": {
+    "build": "tsc",
+    "dev": "npm run build && node --watch ."
+  },
+  "keywords": [],
+  "author": "ahmetcanisik <imcanisik@gmail.com> (https://ahmetcanisik.com)",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/express": "^5.0.0",
+    "@types/node": "^22.13.1",
+    "typescript": "^5.7.3"
+  },
+  "dependencies": {
+    "express": "^4.21.2"
+  }
+}
