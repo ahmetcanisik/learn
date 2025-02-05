@@ -31,4 +31,11 @@ git remote add origin [url] &&
 git push --set-upstream origin master
 ```
 
-git pull is combination of fetch and merge.
+### git pull: 
+    - önce fetch ardından merge komutlarını çalıştırır.
+    - repo da bir dğeişiklik yapılmış ise değişiklikleri yerel repoya eklememizi sağlar.
+
+### tüm branchları görmek
+```shell
+git branch -a
+```
