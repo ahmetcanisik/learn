@@ -1,6 +1,6 @@
 use rand::Rng;
 use std::cmp::Ordering;
-use std::io;
+use std::io::{self, Write};
 
 fn main() {
     println!("Sayıyı Tahmin Et!\n Pes etmek isterseniz 'yeter' demeniz yeterlidir.");
@@ -8,7 +8,8 @@ fn main() {
     let secret_number = rand::thread_rng().gen_range(1..=100);
 
     loop {
-        println!("Tahmininizi giriniz.");
+        io::stdout().flush().expect("Tahmin uyarısı verilirken flush işleminde bir sorun meydana geldi!");
+        print!("Tahmininizi giriniz.");
 
         let mut guess = String::new();
 

@@ -62,7 +62,11 @@ fn main() {
         );
 
         let type_loop = loop {
-            print!("Dönüştürmek istediğiniz {type_choice} değerini giriniz : ");
+            print!(
+                "{}'a dönüştürmek istediğiniz {} değerini giriniz : ",
+                if type_choice == "fahrenheit" { "Santigrat" } else { "Fahrenheit" },
+                type_choice
+            );
             let mut piece = String::new();
             io::stdout().flush().expect("Flush işlemi başarısız oldu.");
             io::stdin()

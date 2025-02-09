@@ -1,0 +1,17 @@
+{
+  "name": "fetch-api",
+  "version": "1.0.0",
+  "description": "fetch node api",
+  "main": "./dist/index.js",
+  "scripts": {
+    "build": "tsc",
+    "try": "npm run build && node ."
+  },
+  "keywords": [],
+  "author": "ahmetcanisik <imcanisik@gmail.com> (https://ahmetcanisik.com)",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/node": "^22.13.1",
+    "typescript": "^5.7.3"
+  }
+}

@@ -39,3 +39,6 @@ git push --set-upstream origin master
 ```shell
 git branch -a
 ```
+
+### varolan remomte adresinin url'sini değiştirmek
+git remote set-url origin [new_git_url]
