@@ -27,14 +27,17 @@ def update_repo(new_url: str | None = None):
         content = json_loads(b64decode(contents.content).decode("utf-8"))
         
         if content["currentSiteURL"] != new_url:
+            print("🔍 Found new URL:", new_url)
             content["currentSiteURL"] = new_url
             repo.update_file(
                 contents.path,
                 f"Updated currentSiteURL to {new_url} in {contents.path}",
                 json_dumps(content, indent=4),
-                contents.sha  # <-- Eksik olan SHA parametresini ekledik
+                contents.sha
             )
             print("✅ Updated! https://github.com/dizipaltv/api/")
+        else:
+            print("URL has no change. the same: ", content["currentSiteURL"])
     except Exception as err:
         print("❌ Something went wrong! New URL was not uploaded to GitHub!", err)
     finally:
