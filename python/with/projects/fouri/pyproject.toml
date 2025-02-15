@@ -1,0 +1,25 @@
+[project]
+name = "fouri"
+version = "0.1.5"
+authors = [
+  { name="canisik", email="imcanisik@gmail.com" },
+]
+description = "Found Dizipal url with fouri"
+readme = "README.md"
+requires-python = ">=3.8"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+
+[project.urls]
+Homepage = "https://github.com/ahmetcanisik/furl"
+Issues = "https://github.com/ahmetcanisik/furl/issues"
+
+[project.scripts]
+fouri = "fouri.__main__:main"
+
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"

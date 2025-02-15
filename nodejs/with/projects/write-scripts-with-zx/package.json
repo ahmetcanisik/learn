@@ -1,0 +1,29 @@
+{
+  "name": "write-scripts-with-zx",
+  "version": "0.1.0",
+  "description": "",
+  "main": "./dist/index.js",
+  "scripts": {
+    "build": "tsc",
+    "try": "npm run build && node ."
+  },
+  "files": [
+    "dist",
+    "LICENSE",
+    "README.md",
+    "package.json"
+  ],
+  "license": "MIT",
+  "author": "",
+  "keywords": [
+    "write-scripts-with-zx"
+  ],
+  "devDependencies": {
+    "@types/node": "^22.13.1",
+    "typescript": "^5.7.3"
+  },
+  "dependencies": {
+    "extra-methods": "^0.1.3",
+    "zx": "^8.3.2"
+  }
+}
