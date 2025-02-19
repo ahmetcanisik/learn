@@ -1,5 +1,4 @@
 #!/usr/bin/env python
-
 def main():
     num = input("What's your number? ")
     
