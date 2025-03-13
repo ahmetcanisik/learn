@@ -1,7 +1,7 @@
-import Calculator from "./calculator";
 import ViewApp from './ViewApp';
+import Link from './Link';
 
 export {
-    Calculator,
     ViewApp,
+    Link,
 }

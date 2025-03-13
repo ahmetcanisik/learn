@@ -1,0 +1,38 @@
+@import 'tailwindcss';
+
+:root {
+    --theme: #FFF0B7;
+    --input: #f5e8c7;
+    --form: #ffea99;
+}
+
+body {
+    background: var(--theme);
+}
+
+input,button {
+    @apply p-1 rounded;
+    border: 1px solid black;
+}
+
+label {
+    @apply flex gap-4;
+}
+
+input {
+    background: var(--input);
+}
+
+form {
+    @apply w-full md:w-1/2;
+    background: linear-gradient(to bottom, var(--form), var(--theme));
+}
+
+
+button {
+    @apply cursor-pointer p-2 w-full;
+}
+
+.label-text {
+    @apply font-medium text-lg;
+}

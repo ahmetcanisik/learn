@@ -1,8 +1,8 @@
-import { Calculator } from "@/components/index.tsx";
-
-function ViewApp() {
+function ViewApp({ children }: { children: React.ReactNode }) {
     return (
-        <Calculator />
+        <div>
+            {children}
+        </div>
     );
 }
 

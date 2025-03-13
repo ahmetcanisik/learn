@@ -12,9 +12,9 @@ function Calculator() {
 
     const [resultScreen, setResultScreen] = useState("0");
 
-    const updateResult = ({ first, second }: { first?: number; second?: number; }) => {
+    /*const updateResult = ({ first, second }: { first?: number; second?: number; }) => {
         
-    }
+    }*/
 
     const updateResultScreen = (innerText: string) => {
         setResultScreen(resultScreen === "0" ? innerText : resultScreen + innerText);
@@ -28,9 +28,9 @@ function Calculator() {
         updateResultScreen(operator);
     }
 
-    const calculateResult = () => {
+    /*const calculateResult = () => {
         updateResultScreen()
-    }
+    }*/
 
     return (
         <div>

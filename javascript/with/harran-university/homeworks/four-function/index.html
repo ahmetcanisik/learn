@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fonksiyonel Dört işlem Ödevi - Etkileşimli Web Arayüzü - Ahmet Can IŞIK</title>
+</head>
+
+<body>
+    <div>
+        <h1 id="baslik"></h1>
+        <ul id="islemler"></ul>
+    </div>
+    <script>
+        const islemler = [
+            {
+                ismi: "toplama",
+                isle: (a, b) => { return a + b },
+            },
+            {
+                ismi: "çıkarma",
+                isle: (a, b) => { return a - b },
+            },
+            {
+                ismi: "çarpma",
+                isle: (a, b) => { return a * b },
+            },
+            {
+                ismi: "bölme",
+                isle: (a, b) => { return a / b },
+            }
+        ]
+
+        
+        document.addEventListener("DOMContentLoaded", () => {
+            const [sayi1, sayi2] = [5, 4];
+            const baslikEtiketi = document.getElementById("baslik");
+            const islemlerEtiketi = document.getElementById("islemler");
+
+            baslikEtiketi.innerHTML = `${sayi1} ve ${sayi2} için dört işlem sonuçları aşağıdaki gibidir;`;
+
+            islemler.forEach(islem => {
+                const is = document.createElement("li");
+                is.innerHTML = `<b>${islem.ismi}</b> ${islem.isle(sayi1, sayi2)}`;
+                islemlerEtiketi.appendChild(is);
+            })
+        });
+    </script>
+</body>
+
+</html>
