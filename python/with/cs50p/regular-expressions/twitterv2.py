@@ -13,7 +13,7 @@ def parse_user_name(url: str | None = None) -> str | None:
     if not is_twitter_url(url):
         return None
         
-    if match := re.search(r"^(?:https?:\/\/)?(?:www\.)?(?:twitter\.com|x\.com)\/([^\/\?]+)", url.strip().lower()):
+    if match := re.search(r"^(?:https?:\/\/)?(?:www\.)?(?:twitter|x)\.com\/([\w@]+)", url.strip().lower()):
         return match.group(1)
     
     return None
