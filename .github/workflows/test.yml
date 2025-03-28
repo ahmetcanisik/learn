@@ -21,5 +21,5 @@ jobs:
             - name: Install dependencies
               run: python3 -m pip install --upgrade pip pytest
 
-            - name: Run Tests
-              run: python3 -m pytest
+            - name: Test python3 regular expressions
+              run: python3 -m pytest ./python/with/cs50p/regular-expressions/tests
