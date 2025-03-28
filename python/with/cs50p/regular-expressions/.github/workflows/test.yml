@@ -1,0 +1,25 @@
+name: Unit test for Regular Expressions
+
+on:
+    push:
+        branches:
+            - main
+    workflow_dispatch:
+
+jobs:
+    test:
+        runs-on: ubuntu-latest
+        steps:
+            - name: Checkout repository
+              uses: actions/checkout@v4
+            
+            - name: Setup Python
+              uses: actions/setup-python@v4
+              with:
+                python-version: '3.13'
+        
+            - name: Install dependencies
+              run: python3 -m pip install --upgrade pip pytest
+
+            - name: Run Tests
+              run: python3 -m pytest

@@ -1,0 +1,53 @@
+:root {
+  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+  transition: all;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+ *{
+  top: 0;
+  left: 0;
+  box-sizing: border-box;
+   font-size: large;
+ }
+
+ body {
+  margin: 0;
+  padding: 0;
+ }
+
+button {
+  padding: 0.3rem 0.8rem;
+  cursor: pointer;
+}
+
+.list-repos {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+
+  button {
+    background-color: transparent;
+    outline: 0.1rem solid black;
+    text-align: left;
+    border-radius: 0 0.5rem 4rem 0;
+
+    &:hover {
+      border-left: 2rem solid black;
+      background-color: dodgerblue;
+      color: white;
+    }
+  }
+}
+
+.active {
+  color: dodgerblue;
+  font-weight: bold;
+  border: 0.2rem solid dodgerblue;
+}

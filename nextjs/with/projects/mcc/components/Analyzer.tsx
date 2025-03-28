@@ -18,8 +18,7 @@ export default function Analyzer({ url }: { url: string }) {
 
                 if (data.content) {
                     // Cheerio ile sayfadan bilgileri çekelim
-                    const $ = data.content;
-                    setPageContent($('body').html() || '');
+                    setPageContent(data.content);
                 }
             })
             .catch((err) => setError(err.message))

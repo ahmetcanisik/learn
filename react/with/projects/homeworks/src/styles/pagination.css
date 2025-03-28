@@ -1,0 +1,27 @@
+.pagination {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+}
+
+.pagination-btn {
+    width: 50%;
+    font-size: large;
+    background: transparent;
+    padding: 20px;
+    border-radius: 8px;
+    outline: 2px solid black;
+    outline-offset: 2px;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+.prev {
+    text-align: left;
+}
+
+.next {
+    text-align: right;
+    float: right;
+}
