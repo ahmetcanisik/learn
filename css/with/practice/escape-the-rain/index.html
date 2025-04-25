@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Escape the Rain</title>
+    <link rel="stylesheet" href="./index.css">
+</head>
+<body>
+    <div id="canvas">
+        <div id="score">Score: 0</div>
+        
+        <div id="start-screen">
+            <h1>Escape the Rain</h1>
+            <p>Help the character escape the deadly rain! Use arrow keys or WASD to move, Space to jump.</p>
+            <button id="start-button" class="btn">Start Game</button>
+        </div>
+        
+        <div id="game-over-screen" style="display: none;">
+            <h1>Game Over</h1>
+            <p>You were caught in the rain!</p>
+            <p>Your score: <span id="final-score">0</span></p>
+            <button id="restart-button" class="btn">Play Again</button>
+        </div>
+    </div>
+    
+    <div class="controls">
+        <p>Use arrow keys or WASD to move the character. Space to jump.</p>
+    </div>
+    
+    <script src="./index.js"></script>
+</body>
+</html>
