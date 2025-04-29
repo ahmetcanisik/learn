@@ -1,0 +1,28 @@
+{
+  "homeworks": [
+    {
+      "id": "test_odev1",
+      "owner_id": "242325013",
+      "subject": "test",
+      "content": "test content"
+    },
+    {
+      "id": "test_odev2",
+      "owner_id": "242325013",
+      "subject": "test",
+      "content": "test content"
+    },
+    {
+      "id": "test_odev3",
+      "owner_id": "242325013",
+      "subject": "test",
+      "content": "test content"
+    },
+    {
+      "id": "test_odev4",
+      "owner_id": "242325013",
+      "subject": "test",
+      "content": "test content"
+    }
+  ]
+}
