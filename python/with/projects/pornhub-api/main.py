@@ -3,6 +3,7 @@ from selenium.webdriver.chrome.options import Options
 import json
 import time
 
+
 def search_pornhub(query: str, page: int = 1):
     options = Options()
     options.headless = True
@@ -24,6 +25,7 @@ def search_pornhub(query: str, page: int = 1):
         print("JSON çözümlenemedi.")
         return None
 
+
 def main():
     query = "chechick"
     results = search_pornhub(query)
@@ -33,6 +35,7 @@ def main():
             print(f"{video["duration"]} {video["title"]}")
     else:
         print("Hiç sonuç alınamadı.")
+
 
 if __name__ == "__main__":
     main()

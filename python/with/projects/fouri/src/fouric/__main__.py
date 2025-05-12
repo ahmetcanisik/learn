@@ -2,9 +2,13 @@
 from sys import argv
 from commands import command_list
 
+
 def list_commands():
     for cmd in command_list:
-        print(f"- {", ".join(cmd['args']) if isinstance(cmd["args"], list) else str(cmd["args"])}")
+        print(
+            f"- {", ".join(cmd['args']) if isinstance(cmd["args"], list) else str(cmd["args"])}"
+        )
+
 
 def main():
     if len(argv) > 1:
@@ -27,6 +31,7 @@ def main():
 
     print(f"\n{", ".join(argv[1:])} Command not found!\n\nHere is command list:")
     list_commands()
+
 
 if __name__ == "__main__":
     main()

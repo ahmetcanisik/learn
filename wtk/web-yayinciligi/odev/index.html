@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Yayıncılığı Ödevi – Ahmet Can IŞIK</title>
+    <style>
+        * {
+            top: 0;
+            left: 0;
+            box-sizing: border-box;
+        }
+        body {
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            height: 100vh;
+            display: flex;
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            gap: 10px;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            background-color: black;
+            color: white;
+        }
+        .homework {
+            width: 300px;
+            background-color: #222;
+            border-radius: 16px;
+            border-bottom: 4px solid black;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 10px;
+        }
+
+        .homework img {
+            width: 64px;
+            height: 64px;
+        }
+        .homework img:hover {
+            border-bottom: 8px solid white;
+            border-radius: 8px;
+        }
+
+        header {
+            width: 300px;
+        }
+        h3 {
+            color: gray;
+        }
+        footer {
+            width: 300px;
+        }
+        button {
+            background-color: #222;
+            color: white;
+            border: none;
+            border-bottom: 4px solid gray;
+            padding: 10px 20px;
+            border-radius: 8px;
+            width: 300px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #333;
+            border-bottom: 4px solid white;
+
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h3>Ahmet Can IŞIK - 242325013</h3>
+        <h1>Web Yayıncılığı Ödevi</h1>
+        <p>
+            Resimlerin üzerine gelinip birkaç saniye beklendikten sonra ne olduklarına dair bilgi bulabilirsiniz. Resme tıklandığında ayrıntılı
+
+        </p>
+    </header>
+    <main class="homework">
+        <a href="./basketball-ball.svg" target="_blank">
+            <img src="./basketball-ball.svg" alt="basketball-ball" title="basketbol topu">
+        </a>
+        <a href="./book.svg" target="_blank">
+            <img src="./book.svg" alt="book" title="kitap">
+        </a>
+        <a href="./ear.svg" target="_blank">
+            <img src="./ear.svg" alt="ear" title="insan kulağı">
+        </a>
+        <a href="./handbag.svg" target="_blank">
+            <img src="./handbag.svg" alt="handbag" title="çanta">
+        </a>
+        <a href="./headphone.svg" target="_blank">
+            <img src="./headphone.svg" alt="headphone" title="kulaklık">
+        </a>
+        <a href="./key.svg" target="_blank">
+            <img src="./key.svg" alt="key" title="anahtar">
+        </a>
+        <a href="./laptop.svg" target="_blank">
+            <img src="./laptop.svg" alt="monitor" title="monitör">
+        </a>
+        <a href="./locked-key.svg" target="_blank">
+            <img src="./locked-key.svg" alt="locked-key" title="kilit">
+        </a>
+        <a href="./money.svg" target="_blank">
+            <img src="./money.svg" alt="money" title="para">
+        </a>
+        <a href="./phone.svg" target="_blank">
+            <img src="./phone.svg" alt="phone" title="telefon">
+        </a>
+    </main>
+    <footer>
+        <!-- download all icons in one picture with html2canvas -->
+        <button id="download">Resim olarak kaydedin</button>
+    </footer>
+
+    <script src="./html2canvas.min.js"></script>
+    <script>
+        document.getElementById('download').addEventListener('click', function () {
+            html2canvas(document.querySelector('.homework')).then(canvas => {
+                const link = document.createElement('a');
+                link.download = 'homework.png';
+                link.href = canvas.toDataURL();
+                link.click();
+            });
+        });
+    </script>
+</body>
+
+</html>

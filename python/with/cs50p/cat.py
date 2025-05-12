@@ -14,6 +14,7 @@ for y, z in enumerate(["a", "b", "c", "d"]):
 print("meow\n" * 3, end="")
 """
 
+
 def main():
     number = get_number_from_the_user()
     meow_to_screen(number)
@@ -25,9 +26,11 @@ def get_number_from_the_user():
         if n > 0:
             return n
 
+
 def meow_to_screen(n):
     for _ in range(n):
         print("meow")
+
 
 if __name__ == "__main__":
     main()

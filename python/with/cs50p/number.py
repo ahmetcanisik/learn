@@ -1,5 +1,6 @@
 #!/usr/bin/env python3
 
+
 def main():
     while True:
         try:
@@ -10,6 +11,7 @@ def main():
             break
 
     print(f"x is {x}")
+
 
 if __name__ == "__main__":
     main()

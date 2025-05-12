@@ -1,5 +1,6 @@
 #!/usr/bin/env python3
 
+
 def main():
     x = int(input("What's x? "))
 
@@ -10,7 +11,7 @@ def main():
 
 
 def is_even(n):
-    return (n % 2 == 0) # return True if n % 2 == 0 else False
+    return n % 2 == 0  # return True if n % 2 == 0 else False
 
 
 if __name__ == "__main__":

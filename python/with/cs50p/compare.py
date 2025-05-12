@@ -2,7 +2,8 @@ def get_n(question: str):
     if question is not None:
         x = int(input("What's x? "))
         return x
-        
+
+
 x = get_n("What's x? ")
 y = get_n("What's y? ")
 

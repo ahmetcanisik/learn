@@ -1,5 +1,6 @@
 import customtkinter
 
+
 class RadiobuttonFrame(customtkinter.CTkFrame):
     def __init__(self, master, title, values):
         super().__init__(master)
@@ -9,11 +10,15 @@ class RadiobuttonFrame(customtkinter.CTkFrame):
         self.radiobuttons = []
         self.variable = customtkinter.StringVar(value="")
 
-        self.title = customtkinter.CTkLabel(self, text=self.title, fg_color="gray30", corner_radius=6)
+        self.title = customtkinter.CTkLabel(
+            self, text=self.title, fg_color="gray30", corner_radius=6
+        )
         self.title.grid(row=0, column=0, padx=10, pady=(10, 0), sticky="ew")
 
         for i, value in enumerate(self.values):
-            radiobutton = customtkinter.CTkRadioButton(self, text=value, value=value, variable=self.variable)
+            radiobutton = customtkinter.CTkRadioButton(
+                self, text=value, value=value, variable=self.variable
+            )
             radiobutton.grid(row=i + 1, column=0, padx=10, pady=(10, 0), sticky="w")
             self.radiobuttons.append(radiobutton)
 

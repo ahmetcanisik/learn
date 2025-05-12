@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 import uuid
 
+
 class P:
     def __init__(self, id: str = None):
         if id is None:
@@ -20,15 +21,18 @@ class P:
     def __str__(self):
         return str(self._id)
 
+
 def gen_id():
     return str(uuid.uuid4())
+
 
 def main():
     pid = P(gen_id())
     print(pid)
-    
+
     pid.id = gen_id()
     print(pid.id)
+
 
 if __name__ == "__main__":
     main()

@@ -1,5 +1,6 @@
 import customtkinter
 
+
 class CheckboxFrame(customtkinter.CTkFrame):
     def __init__(self, master, title, values):
         super().__init__(master)
@@ -8,12 +9,14 @@ class CheckboxFrame(customtkinter.CTkFrame):
         self.title = title
         self.checkboxes = []
 
-        self.title = customtkinter.CTkLabel(self, text=self.title, fg_color="gray30", corner_radius=6)
+        self.title = customtkinter.CTkLabel(
+            self, text=self.title, fg_color="gray30", corner_radius=6
+        )
         self.title.grid(row=0, column=0, padx=10, pady=(10, 0), sticky="ew")
 
         for i, value in enumerate(self.values):
             checkbox = customtkinter.CTkCheckBox(self, text=value)
-            checkbox.grid(row=i+1, column=0, padx=10, pady=(10, 0), sticky="w")
+            checkbox.grid(row=i + 1, column=0, padx=10, pady=(10, 0), sticky="w")
             self.checkboxes.append(checkbox)
 
     def get(self):

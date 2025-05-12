@@ -5,17 +5,21 @@ def say(*values: object):
 say("+ What's your name?")
 """
 
+
 def capitalizeName(value: str | list[str]) -> str:
     if not isinstance(value, str) and not isinstance(value, list[str]):
-        raise TypeError(f"Are Expected types of value is str or list[str] but not {type(value)}")
-    
+        raise TypeError(
+            f"Are Expected types of value is str or list[str] but not {type(value)}"
+        )
+
     nam = value.split(" ") if isinstance(value, str) else value
     un = ""
     for i, n in enumerate(nam):
         un += f"{n.capitalize()}{"" if len(nam[i]) == (len(nam) - 1) else " "}"
-    
+
     return un
-    
+
+
 print("Start the", end=" ")
 print("Conversation...")
 

@@ -1,17 +1,19 @@
 #!/usr/bin/env python3
 import re
 
+
 def main():
     email = input("What's your email? ").strip()
-    
+
     if re.search(r"^[\w\.]@[a-zA-Z0-9\.-]+\.[a-zA-Z0-9]{2,}$", email, re.IGNORECASE):
         print("Valid")
     else:
         print("Invalid")
-    
+
+
 if __name__ == "__main__":
     main()
-    
+
 """
 # without re
 
