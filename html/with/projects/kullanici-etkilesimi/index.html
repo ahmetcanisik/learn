@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Interact for Users</title>
+	<link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+	<div class="app">
+		<div class="form-area">
+			<form id="saveStudent">
+				<h2>Öğrenci Kaydet</h2>
+				<div class="field">
+					<label for="name">Adınız: </label>
+					<input id="name" name="name" type="text" placeholder="Adınız" required>
+				</div>
+	
+				<div class="field">
+					<label for="surname">Soy Adınız: </label>
+					<input id="surname" name="surname" type="text" placeholder="Soy Adınız" required>
+				</div>
+				<div class="field">
+					<label for="studentNumber">
+						Öğrenci Numaranız:
+					</label>
+					<input id="studentNumber" name="studentNumber" type="text" placeholder="Öğrenci Numaranız" required>
+				</div>
+	
+				<div class="field">
+					<label for="note">Not Ortalamanız: </label>
+					<input id="note" name="note" type="text" placeholder="Not ortalamanız" required>
+				</div>
+	
+				<div class="field">
+					<label for="depart">Bölümünüz: </label>
+					<input id="depart" name="depart" type="text" placeholder="bölümünüz" required>
+				</div>
+	
+	
+				<button type="submit">Kaydet</button>
+			</form>
+		</div>
+	
+		<main>
+			<header>
+				<h1>Harran Üniversitesi Öğrenci Notları</h1>
+				<p>Harran Üniversitesi Öğrencileri için notlar aşağıdaki gibidir</p>
+			</header>
+		</main>
+	</div>
+	<script type="module" src="./students.js"></script>
+</body>
+
+</html>

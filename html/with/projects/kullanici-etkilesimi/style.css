@@ -1,0 +1,70 @@
+:root {
+    --main-theme: #4F73FF;
+    --theme: #e9eeff;
+    --card-bg: #091129;
+    --form-bg: #1e398a;
+}
+
+* {
+    top: 0;
+    left: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: -system-ui, apple-system, Segoe, "Segoe UI", "DejaVu Sans", "Trebuchet MS", Verdana, "sans-serif", Baskerville, "Palatino Linotype", Palatino, "Century Schoolbook L", "Times New Roman", "serif";
+    background-color: var(--theme);
+    margin: 0;
+    padding: 0;
+}
+
+.error {
+    border-color: red;
+    color: red;
+}
+
+.app {
+    display: flex;
+}
+
+header {
+    margin: 0 auto;
+    text-align: center;
+}
+
+@media (max-width: 768px) {
+    .app {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+form {
+    min-height: 100vh;
+    width: 300px;
+    border: 1px solid var(--card-bg);
+    background-color: var(--form-bg);
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+}
+
+.field {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin-top: 10px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    box-shadow: 2px 2px 5px var(--card-bg);
+}
+
+button {
+    width: 100%;
+    padding: 10px 20px;
+}

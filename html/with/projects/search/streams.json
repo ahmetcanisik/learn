@@ -1,0 +1,74 @@
+[
+    {
+        "title": "Inception",
+        "directors": ["Christopher Nolan"],
+        "release_year": 2010,
+        "genre": "Science Fiction",
+        "rating": 8.8,
+        "type": "movie"
+    },
+    {
+        "title": "The Godfather",
+        "directors": ["Francis Ford Coppola"],
+        "release_year": 1972,
+        "genre": "Crime",
+        "rating": 9.2,
+        "type": "movie"
+    },
+    {
+        "title": "The Dark Knight",
+        "directors": ["Christopher Nolan"],
+        "release_year": 2008,
+        "genre": "Action",
+        "rating": 9.0,
+        "type": "movie"
+    },
+    {
+        "title": "Pulp Fiction",
+        "directors": ["Quentin Tarantino"],
+        "release_year": 1994,
+        "genre": "Crime",
+        "rating": 8.9,
+        "type": "movie"
+    },
+    {
+        "title": "The Shawshank Redemption",
+        "directors": ["Frank Darabont"],
+        "release_year": 1994,
+        "genre": "Drama",
+        "rating": 9.3,
+        "type": "movie"
+    },
+    {
+        "title": "Friends",
+        "directors": ["David Crane", "Marta Kauffman"],
+        "release_year": 1994,
+        "genre": "Comedy",
+        "rating": 8.9,
+        "type": "series"
+    },
+    {
+        "title": "Breaking Bad",
+        "directors": ["Vince Gilligan"],
+        "release_year": 2008,
+        "genre": "Crime",
+        "rating": 9.5,
+        "type": "series"
+    },
+    {
+        "title": "Game of Thrones",
+        "directors": ["David Benioff", "D.B. Weiss"],
+        "release_year": 2011,
+        "genre": "Fantasy",
+        "rating": 9.3,
+        "type": "series"
+    },
+    {
+        "title": "The Office",
+        "directors": ["Greg Daniels"],
+        "release_year": 2005,
+        "genre": "Comedy",
+        "rating": 8.8,
+        "type": "series"
+    }
+]

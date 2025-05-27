@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Search</title>
+    <style>
+        * {
+            top: 0;
+            left: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: #f0f0f0;
+        }
+        #streams {
+            width: 300px;
+            max-width: 300px;
+        }
+        #streams-list {
+            background-color: #222;
+            color: white;
+            border-radius: 8px;
+            box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+            padding: 10px;
+        }
+        .stream-item {
+            border-left: 4px solid red;
+            color: white;
+            border-radius: 16px;
+            padding: 10px;
+        }
+    </style>
+    </style>
+</head>
+
+<body>
+    <div id="streams">
+        <input type="text" id="search" placeholder="ara...">
+    </div>
+    <script type="module">
+        async function getStreams() {
+            const res = await fetch("./streams.json");
+            if (res.ok) {
+                const data = await res.json();
+                return data;
+            }
+
+            return [];
+        }
+
+        async function showItems(parent, items) {
+            const itemsDiv = document.createElement("div");
+            itemsDiv.id = "streams-list";
+
+            if (document.getElementById("streams-list")) {
+                document.getElementById("streams-list").remove();
+            }
+
+            items.forEach(item => {
+                const itemDiv = document.createElement("div");
+                itemDiv.className = "stream-item";
+                itemDiv.innerHTML = `
+                    <h3>${item.title}</h3>
+                    <p>${item.release_year}</p>
+                    <h4>${item.type}</h4>
+                `;
+                itemsDiv.appendChild(itemDiv);
+            });
+
+            parent.appendChild(itemsDiv);
+        }
+
+        async function main() {
+            const streams = await getStreams();
+            const searchInput = document.getElementById("search");
+            const streamsDiv = document.getElementById("streams");
+
+            searchInput.addEventListener("input", (e) => {
+                const query = e.target.value.toLowerCase();
+                const filteredStreams = streams.filter(stream => stream.title.toLowerCase().includes(query));
+                showItems(streamsDiv, filteredStreams);
+            });
+        }
+
+        document.addEventListener("DOMContentLoaded", () => {
+            (async () => {
+                await main();
+            })();
+        });
+    </script>
+</body>
+
+</html>
