@@ -1,0 +1,15 @@
+{
+  "name": "dictplus",
+  "module": "index.ts",
+  "type": "module",
+  "private": true,
+  "devDependencies": {
+    "@types/bun": "latest"
+  },
+  "peerDependencies": {
+    "typescript": "^5"
+  },
+  "dependencies": {
+    "inquirer": "^12.6.3"
+  }
+}

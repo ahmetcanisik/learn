@@ -120,6 +120,8 @@ class Homeworks {
         {
             homeworkID: 1,
             title: "İki değişkenin Dört işlemi",
+            description: "İki değişken oluşturup bunları dört işleme tabi tutuyoruz.",
+            tags: ["dört işlem", "fonksiyon", "değişken"],
             lesson: "Etkileşimli Web Arayüzü Geliştirme",
             author: "Ahmet Can IŞIK",
             depart: "WTK",
@@ -129,6 +131,8 @@ class Homeworks {
         {
             homeworkID: 2,
             title: "Dört işleme dört fonksiyon",
+            description: "Dört işlem için ayrı fonksiyonlar tanımlıyoruz.",
+            tags: ["dört işlem", "fonksiyon", "değişken"],
             lesson: "Etkileşimli Web Arayüzü Geliştirme",
             author: "Ahmet Can IŞIK",
             depart: "WTK",
@@ -138,11 +142,24 @@ class Homeworks {
         {
             homeworkID: 3,
             title: "Cümleyi kelimelerine ayırmak",
+            description: "Kullanıcıdan alınan bir cümleyi kelimelerine ayırıyoruz.",
+            tags: ["cümle", "kelime", "fonksiyon"],
             lesson: "Etkileşimli Web Arayüzü Geliştirme",
             author: "Ahmet Can IŞIK",
             depart: "WTK",
             school: "Harran University",
             execfn: this.third
+        },
+        {
+            homeworkID: 4,
+            title: "Karşılaştır babam karşılaştır",
+            description: "Kullanıcıdan alınan iki sayının çarpım ve toplamlarını karşılaştırıyoruz.",
+            tags: ["karşılaştırma", "fonksiyon", "değişken"],
+            lesson: "Etkileşimli Web Arayüzü Geliştirme",
+            author: "Ahmet Can IŞIK",
+            depart: "WTK",
+            school: "Harran University",
+            execfn: this.fourth
         }
     ];
 
@@ -237,6 +254,56 @@ class Homeworks {
         button.addEventListener("click", () => {
             listWords(parent, input.value);
         });
+    }
+
+    fourth(parent) {
+        const nums = [NaN, NaN];
+
+        for (let i = 0; i <= 2; i++) {
+            if (i == 2) {
+                const button = document.createElement("button");
+                button.className = "btn";
+                button.innerText = "Karşılaştır";
+                parent.appendChild(button);
+
+                button.addEventListener("click", () => {
+                    if (nums[0] === NaN || nums[1] === NaN) {
+                        alert("Lütfen sayıları giriniz!");
+                        return;
+                    }
+
+                    const resultDiv = document.getElementById("result-div") ?? document.createElement("div");
+                    resultDiv.innerHTML = "";
+                    resultDiv.id = "result-div";
+                    const multiply = nums[0] * nums[1];
+                    const addition = nums[0] + nums[1];
+                    if (multiply > addition) {
+                        resultDiv.innerText = `Çarpım(${multiply}) toplamdan(${addition}) büyüktür.`;
+                    }
+                    else if (multiply < addition) {
+                        resultDiv.innerText = `Toplam(${addition}) çarpımdan(${multiply}) küçüktür.`;
+                    } else {
+                        resultDiv.innerText = `Çarpım ve toplam eşittir: ${multiply}`;
+                    }
+                    parent.appendChild(resultDiv);
+                })
+                break;
+            }
+
+            const input = document.createElement("input");
+            input.type = "number";
+            input.className = "inp";
+            input.placeholder = `Sayı ${i + 1}`;
+            parent.appendChild(input);
+
+            input.addEventListener("input", (e) => {
+                nums[i] = Number(e.target.value);
+            });
+        }
+    }
+
+    fiveth(parent) {
+        
     }
 
     get get_homeworks() {
