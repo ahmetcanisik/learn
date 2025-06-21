@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <img src="https://upload.wikimedia.org/wikipedia/en/b/bb/Tous-les-memes-by-stromae.jpg" alt="tous le memes"
+        width="300" height="200" usemap="#tous-le-memes">
+
+    <map name="tous-le-memes">
+        <area shape="rect" coords="0,0,150,200" href="#women" alt="women" title="man">
+        <area shape="rect" coords="150,0,300,200" href="#man" alt="man" title="women">
+    </map>
+
+    <script>
+        document.querySelector("img").addEventListener("mousemove", function (e) {
+            const rect = e.target.getBoundingClientRect();
+            const x = Math.round(e.clientX - rect.left);
+            const y = Math.round(e.clientY - rect.top);
+            console.log(`X: ${x}, Y: ${y}`);
+        });
+    </script>
+</body>
+
+</html>

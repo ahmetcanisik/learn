@@ -1,0 +1,14 @@
+{
+  "name": "indoor",
+  "private": true,
+  "devDependencies": {
+    "@types/bun": "latest"
+  },
+  "peerDependencies": {
+    "typescript": "^5"
+  },
+  "dependencies": {
+    "@inquirer/input": "^4.1.12",
+    "@inquirer/prompts": "^7.5.3"
+  }
+}
