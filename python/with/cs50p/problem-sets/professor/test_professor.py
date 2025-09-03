@@ -23,6 +23,7 @@ def generate_integer(level: int) -> int:
 
 
 def main():
+    random.seed(1)  # Fixed seed for testing
     level = get_level()
     score = 0
 
